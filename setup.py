@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="lambdata-vishnuyar",
-    version="0.0.1",
+    version="0.0.4",
     author="vishnu yarmaneni",
     author_email="vardhanvishnu@gmail.com",
     description="Helper functions package for DataScience",
