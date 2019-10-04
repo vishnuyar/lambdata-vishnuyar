@@ -6,12 +6,6 @@ class ContingencyChiSquare:
     Helper class for generating contingency table and chi square statistics
     """
    
-
-        # Defining the initation fo the class
-    def __init__(self):
-        pass
-
-
     # Defining the function for creating contigency table
     def get_contingency_table(self,column1, column2):
         self.contingeny_table = pd.crosstab(index= column1, columns= column2)

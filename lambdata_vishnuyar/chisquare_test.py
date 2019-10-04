@@ -1,7 +1,8 @@
 import unittest
-from . contingency_chisquare import ContingencyChiSquare
 import pandas as pd
 import numpy as np
+
+import chisquare
 
 
 class ChisquareHelperTest(unittest.TestCase):
@@ -11,11 +12,11 @@ class ChisquareHelperTest(unittest.TestCase):
     myframe = pd.DataFrame({'a':a,'b':b})
     
 
-    def contingency_table_test(self):
+    def test_contingency_table(self):
         """ Testing contingency table generation """
-        self.cc = ContingencyChiSquare()
-        self.con_table = self.cc.contingeny_table(self.myframe['a'], self.myframe['b'])
-        self.assertEqual(5,3)
+        cc = chisquare.ContingencyChiSquare()
+        con_table = cc.get_contingency_table(self.myframe['a'], self.myframe['b'])
+        self.assertEqual(con_table.shape,(2,2))
 
 
 if __name__ == "__main__":
